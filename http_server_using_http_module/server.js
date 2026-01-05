@@ -7,6 +7,7 @@ const server = http.createServer((req, res) => {
   console.log("request arrived");
   req.on("data", (chunk) => {
     console.log(chunk);
+    res.end("response from the server")
   });
   res.setHeader("Content-Length", "10");
   res.write("hi from http server");
